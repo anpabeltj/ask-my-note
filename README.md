@@ -14,7 +14,7 @@ Two workflows, deliberately separate.
 
 **1. Ingest - Catatan ke Vector Store**
 
-![Ingest workflow](ingest.png)
+![Ingest workflow](/Users/anpabelt/Downloads/n8n-portfolio/tanya-catatanku/ingest.png)
 
 - Reads every `.md` file in `/vault/2nd-brain/notes`.
 - The Default Data Loader splits each note into chunks (1000 characters, 200 overlap) and stamps the filename into a `sumber` metadata field.
@@ -24,10 +24,10 @@ Two workflows, deliberately separate.
 
 **2. Agent - Tanya Catatanku**
 
-![Agent workflow](agent.png)
+![Agent workflow](/Users/anpabelt/Downloads/n8n-portfolio/tanya-catatanku/agent.png)
 
 - Telegram poll receives the question.
-- An AI Agent with Gemini as the chat model and Qdrant in *retrieve as tool* mode searches the collection.
+- An AI Agent with Gemini as the chat model and Qdrant in _retrieve as tool_ mode searches the collection.
 - The system prompt requires the answer to end with `Sumber: <note>.md` and forbids inventing details.
 - A Code node reads that citation, finds the matching attachment, and the bot replies with the answer and the original file.
 
